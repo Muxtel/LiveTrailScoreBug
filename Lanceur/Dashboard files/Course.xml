@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><course Nom="trav: 60km">
+   <timestamp>1653395208891</timestamp>
+   <lignes>
+      <l>
+         <Nom/>
+         <Point>Fouly</Point>
+         <Point>Col Fen</Point>
+         <Point>GStB</Point>
+         <Point>BSP</Point>
+      </l>
+      <l>
+         <Nom>Francois DHAENE</Nom>
+         <Dossard>1884</Dossard>
+         <Classement>1</Classement>
+         <Point>01:17</Point>
+         <Point>02:26</Point>
+         <Point>02:41</Point>
+         <Point>04:03</Point>
+      </l>
+      <l>
+         <Nom>Yannick SCHMALZ</Nom>
+         <Dossard>1354</Dossard>
+         <Classement>2</Classement>
+         <Point>01:18</Point>
+         <Point/>
+         <Point/>
+         <Point/>
+      </l>
+      <l>
+         <Nom>Nuno MARTINS</Nom>
+         <Dossard>1344</Dossard>
+         <Classement>3</Classement>
+         <Point>01:18</Point>
+         <Point/>
+         <Point/>
+         <Point>06:06</Point>
+      </l>
+      <l>
+         <Nom>Candide GABIOUD</Nom>
+         <Dossard>1887</Dossard>
+         <Classement>4</Classement>
+         <Point>01:18</Point>
+         <Point>02:34</Point>
+         <Point>02:51</Point>
+         <Point>04:32</Point>
+      </l>
+      <l>
+         <Nom>David POLETTI</Nom>
+         <Dossard>1853</Dossard>
+         <Classement>5</Classement>
+         <Point>01:18</Point>
+         <Point>02:39</Point>
+         <Point>02:57</Point>
+         <Point>04:37</Point>
+      </l>
+      <l>
+         <Nom>Jonathan LATTION</Nom>
+         <Dossard>1835</Dossard>
+         <Classement>6</Classement>
+         <Point>01:18</Point>
+         <Point>02:33</Point>
+         <Point>02:49</Point>
+         <Point>04:31</Point>
+      </l>
+      <l>
+         <Nom>Joachim PELLISSIER</Nom>
+         <Dossard>1889</Dossard>
+         <Classement>7</Classement>
+         <Point>01:18</Point>
+         <Point>02:39</Point>
+         <Point>02:57</Point>
+         <Point>04:41</Point>
+      </l>
+      <l>
+         <Nom>Thomas ROZE</Nom>
+         <Dossard>1768</Dossard>
+         <Classement>8</Classement>
+         <Point>01:18</Point>
+         <Point>02:39</Point>
+         <Point>02:57</Point>
+         <Point>04:37</Point>
+      </l>
+      <l>
+         <Nom>Cédric TISSIERES</Nom>
+         <Dossard>1836</Dossard>
+         <Classement>9</Classement>
+         <Point>01:18</Point>
+         <Point>02:42</Point>
+         <Point>03:02</Point>
+         <Point>04:54</Point>
+      </l>
+      <l>
+         <Nom>Eric BROSSARD</Nom>
+         <Dossard>1891</Dossard>
+         <Classement>10</Classement>
+         <Point>01:18</Point>
+         <Point>02:48</Point>
+         <Point>03:09</Point>
+         <Point>04:54</Point>
+      </l>
+      <l>
+         <Nom>William DEGEMBE</Nom>
+         <Dossard>1699</Dossard>
+         <Classement>11</Classement>
+         <Point>01:18</Point>
+         <Point>02:40</Point>
+         <Point>03:00</Point>
+         <Point>04:51</Point>
+      </l>
+      <l>
+         <Nom>Xavier MONIN</Nom>
+         <Dossard>1812</Dossard>
+         <Classement>12</Classement>
+         <Point>01:18</Point>
+         <Point>02:58</Point>
+         <Point>03:18</Point>
+         <Point>05:04</Point>
+      </l>
+      <l>
+         <Nom>David JANUSZKIEWICZ</Nom>
+         <Dossard>1709</Dossard>
+         <Classement>13</Classement>
+         <Point>01:18</Point>
+         <Point>02:47</Point>
+         <Point>03:09</Point>
+         <Point>05:08</Point>
+      </l>
+      <l>
+         <Nom>Xavier BOSSON</Nom>
+         <Dossard>1796</Dossard>
+         <Classement>14</Classement>
+         <Point>01:18</Point>
+         <Point>02:41</Point>
+         <Point>03:00</Point>
+         <Point>04:53</Point>
+      </l>
+      <l>
+         <Nom>Nicolas MERMOUD</Nom>
+         <Dossard>1890</Dossard>
+         <Classement>15</Classement>
+         <Point>01:18</Point>
+         <Point>02:42</Point>
+         <Point>02:59</Point>
+         <Point>04:43</Point>
+      </l>
+   </lignes>
+</course>

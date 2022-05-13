@@ -10,6 +10,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Lanceur", "Lanceur\Lanceur.
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LiveTrailScoreBug", "vMixDataTemplate\LiveTrailScoreBug.vbproj", "{9E185EED-3E31-441E-B365-0BE9E63C9F06}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LiveTrailScorePleinEcran", "LiveTrailScorePleinEcran\LiveTrailScorePleinEcran.vbproj", "{82532A3A-5220-455F-B2F6-0FBCCAAFEE08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{9E185EED-3E31-441E-B365-0BE9E63C9F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E185EED-3E31-441E-B365-0BE9E63C9F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E185EED-3E31-441E-B365-0BE9E63C9F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82532A3A-5220-455F-B2F6-0FBCCAAFEE08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82532A3A-5220-455F-B2F6-0FBCCAAFEE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82532A3A-5220-455F-B2F6-0FBCCAAFEE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82532A3A-5220-455F-B2F6-0FBCCAAFEE08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

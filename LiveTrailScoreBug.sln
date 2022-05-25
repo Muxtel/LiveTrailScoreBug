@@ -12,6 +12,12 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LiveTrailScoreBug", "vMixDa
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LiveTrailScorePleinEcran", "LiveTrailScorePleinEcran\LiveTrailScorePleinEcran.vbproj", "{82532A3A-5220-455F-B2F6-0FBCCAAFEE08}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ross Dashboard Elements", "Ross Dashboard Elements", "{C27666FF-DDF3-437B-9DAD-ACF0FCF13710}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\OneDrive\Bureau\Projets en cours\Euskal trail 2022\vMix\Data\Course.xml = ..\..\..\OneDrive\Bureau\Projets en cours\Euskal trail 2022\vMix\Data\Course.xml
+		..\..\..\OneDrive\Bureau\Projets en cours\Euskal trail 2022\vMix\Euskaltrail Dashboard\Euskaltail Dashboard 1.4.grid = ..\..\..\OneDrive\Bureau\Projets en cours\Euskal trail 2022\vMix\Euskaltrail Dashboard\Euskaltail Dashboard 1.4.grid
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

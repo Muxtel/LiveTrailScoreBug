@@ -37,6 +37,9 @@
                     </SplineDoubleKeyFrame.KeySpline>
                 </SplineDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="FondHead" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <SplineColorKeyFrame KeyTime="00:00:00.6000000" Value="#FF026CC9" />
+            </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="Storyboard2">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="List" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
@@ -71,14 +74,14 @@
     <Grid Opacity="0.8">
         <StackPanel
             Name="Stack"
-            Width="1010"
-            Height="1081"
-            Margin="40,28,0,0"
+            Width="1000"
+            Height="992"
+            Margin="28,40,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top">
             <Canvas
                 x:Name="canvas"
-                Width="800"
+                Width="1000                 "
                 Height="45"
                 Margin="0,0,0,2"
                 HorizontalAlignment="Left"
@@ -94,90 +97,109 @@
                 <Rectangle
                     Name="FondHead"
                     Canvas.Left="3.032"
-                    Width="860"
+                    Width="1000"
                     Height="45"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     RenderTransformOrigin="0.508,0.425">
                     <Rectangle.Fill>
-                        <SolidColorBrush x:Name="MySolidColorBrush" Color="#ff000000" />
+                        <SolidColorBrush x:Name="MySolidColorBrush" Color="#FF026CC9" />
                     </Rectangle.Fill>
                 </Rectangle>
                 <Rectangle
                     Name="FondAltern"
-                    Canvas.Left="363.518"
-                    Width="123"
+                    Canvas.Left="446.273"
+                    Width="140"
                     Height="45"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
-                    Fill="#FF1B1B1B"
+                    Fill="#22FFFFFF"
                     RenderTransformOrigin="0.508,0.425" />
                 <Rectangle
                     Name="FondAltern2"
-                    Canvas.Left="613.608"
-                    Width="123"
+                    Canvas.Left="723.948"
+                    Width="140"
                     Height="45"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
-                    Fill="#FF1B1B1B"
+                    Fill="#22FFFFFF"
                     RenderTransformOrigin="0.508,0.425" />
                 <my:TextBlockDesign
-                    x:Name="Point1"
-                    Canvas.Left="366.794"
-                    Canvas.Top="5.251"
-                    Width="120"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
+                    x:Name="NomCourse"
+                    Canvas.Left="18.178"
+                    Canvas.Top="5.854"
+                    Width="422"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
                     my:Tag="Tag"
                     Fill="#FFF7F5F5"
-                    FontFamily="Franklin Gothic Book"
+                    FontFamily="Futura"
+                    FontSize="30"
+                    FontWeight="Bold"
+                    Stroke="{x:Null}"
+                    Text="{Binding NCourse}"
+                    TextAlignment="Left" />
+                <my:TextBlockDesign
+                    x:Name="Point1"
+                    Canvas.Left="456.905"
+                    Canvas.Top="5.854"
+                    Width="130"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    my:Tag="Tag"
+                    Fill="#FFF7F5F5"
+                    FontFamily="Futura"
                     FontSize="30"
                     Stroke="{x:Null}"
-                    Text="{Binding NPoints[0]}" />
+                    Text="{Binding NPoints[0]}"
+                    TextAlignment="Center" />
                 <my:TextBlockDesign
                     x:Name="Point2"
-                    Canvas.Left="489.63"
-                    Canvas.Top="5.251"
-                    Width="120"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
+                    Canvas.Left="592.614"
+                    Canvas.Top="5.248"
+                    Width="130"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
                     my:Tag="Tag"
                     Fill="#FFFDFDFD"
-                    FontFamily="Franklin Gothic Book"
+                    FontFamily="Futura"
                     FontSize="30"
                     Stroke="{x:Null}"
-                    Text="{Binding NPoints[1]}" />
+                    Text="{Binding NPoints[1]}"
+                    TextAlignment="Center" />
                 <my:TextBlockDesign
                     x:Name="Point3"
-                    Canvas.Left="616.72"
-                    Canvas.Top="5.251"
-                    Width="120"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
+                    Canvas.Left="730.738"
+                    Canvas.Top="5.245"
+                    Width="130"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
                     my:Tag="Tag"
                     Fill="White"
-                    FontFamily="Franklin Gothic Book"
+                    FontFamily="Futura"
                     FontSize="30"
                     Stroke="{x:Null}"
-                    Text="{Binding NPoints[2]}" />
+                    Text="{Binding NPoints[2]}"
+                    TextAlignment="Center" />
                 <my:TextBlockDesign
                     x:Name="Point4"
-                    Canvas.Left="742.922"
-                    Canvas.Top="5.251"
-                    Width="120"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
+                    Canvas.Left="871.652"
+                    Canvas.Top="5.248"
+                    Width="130"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
                     my:Tag="Tag"
                     Fill="White"
-                    FontFamily="Franklin Gothic Book"
+                    FontFamily="Futura"
                     FontSize="30"
                     Stroke="{x:Null}"
-                    Text="{Binding NPoints[3]}" />
+                    Text="{Binding NPoints[3]}"
+                    TextAlignment="Center" />
 
             </Canvas>
             <ListBox
                 x:Name="List"
-                Width="860"
+                Width="1000                 "
                 Margin="0,0,0,0"
                 Padding="0,0,0,0"
                 HorizontalAlignment="Left"
@@ -202,18 +224,18 @@
 
                         <StackPanel
                             Name="StackInList"
-                            Width="855"
+                            Width="1000"
                             Height="47"
                             Orientation="Horizontal">
 
                             <Canvas
                                 x:Name="canvas"
-                                Width="800"
+                                Width="1000"
                                 Height="45"
                                 Margin="0,0,0,2">
                                 <Rectangle
                                     Name="FondLigne"
-                                    Width="857"
+                                    Width="1000"
                                     Height="45"
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Center"
@@ -222,9 +244,10 @@
                                         <SolidColorBrush x:Name="MySolidColorBrush" Color="{Binding Color}" />
                                     </Rectangle.Fill>
                                 </Rectangle>
+
                                 <my:TextBlockDesign
                                     x:Name="Class"
-                                    Canvas.Left="1.492"
+                                    Canvas.Left="6.384"
                                     Canvas.Top="9.502"
                                     Width="31"
                                     Height="57"
@@ -237,28 +260,24 @@
                                     Text="{Binding Classement}" />
                                 <my:TextBlockDesign
                                     x:Name="Courreur"
-                                    Canvas.Left="32.492"
-                                    Canvas.Top="6.668"
-                                    Width="258"
-                                    Height="28"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Center"
+                                    Canvas.Left="41.687"
+                                    Canvas.Top="8.46"
+                                    Width="322"
+                                    Height="26"
                                     my:Tag="Tag"
-                                    FontFamily="Franklin Gothic Medium"
+                                    FontFamily="Futura"
                                     FontSize="28"
                                     Stroke="{x:Null}"
                                     Text="{Binding Nom}"
                                     Visibility="Visible" />
                                 <my:TextBlockDesign
                                     x:Name="Dossard"
-                                    Canvas.Left="297.854"
-                                    Canvas.Top="12.339"
+                                    Canvas.Left="371.416"
+                                    Canvas.Top="10.453"
                                     Width="61"
                                     Height="57"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Center"
                                     my:Tag="Tag"
-                                    FontFamily="Franklin Gothic Medium Cond"
+                                    FontFamily="Futura Cond"
                                     FontSize="23"
                                     ScrollViewer.HorizontalScrollBarVisibility="Hidden"
                                     ScrollViewer.VerticalScrollBarVisibility="Hidden"
@@ -266,52 +285,52 @@
                                     Text="{Binding Dossard}" />
                                 <my:TextBlockDesign
                                     x:Name="Point1"
-                                    Canvas.Left="358.286"
-                                    Canvas.Top="6.668"
+                                    Canvas.Left="450.241"
+                                    Canvas.Top="4.736"
                                     Width="120"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
                                     my:Tag="Tag"
-                                    FontFamily="Franklin Gothic Book"
+                                    FontFamily="Futura"
                                     FontSize="28"
                                     Stroke="{x:Null}"
-                                    Text="{Binding Points[0]}" />
+                                    Text="{Binding Points[0]}"
+                                    TextAlignment="Center" />
                                 <my:TextBlockDesign
                                     x:Name="Point2"
-                                    Canvas.Left="485.376"
-                                    Canvas.Top="6.668"
-                                    Width="120"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Center"
+                                    Canvas.Left="588.365"
+                                    Canvas.Top="5.433"
+                                    Width="130"
                                     my:Tag="Tag"
-                                    FontFamily="Franklin Gothic Book"
+                                    FontFamily="Futura"
                                     FontSize="28"
                                     Stroke="{x:Null}"
-                                    Text="{Binding Points[1]}" />
+                                    Text="{Binding Points[1]}"
+                                    TextAlignment="Center" />
                                 <my:TextBlockDesign
                                     x:Name="Point3"
-                                    Canvas.Left="611.048"
-                                    Canvas.Top="6.668"
-                                    Width="120"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Center"
+                                    Canvas.Left="723.233"
+                                    Canvas.Top="5.433"
+                                    Width="130"
                                     my:Tag="Tag"
-                                    FontFamily="Franklin Gothic Book"
+                                    FontFamily="Futura"
                                     FontSize="28"
                                     Stroke="{x:Null}"
-                                    Text="{Binding Points[2]}" />
+                                    Text="{Binding Points[2]}"
+                                    TextAlignment="Center" />
                                 <my:TextBlockDesign
                                     x:Name="Point3_Copy"
-                                    Canvas.Left="738.668"
-                                    Canvas.Top="6.668"
-                                    Width="120"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Center"
-                                    FontFamily="Franklin Gothic Book"
+                                    Canvas.Left="863.678"
+                                    Canvas.Top="5.478"
+                                    Width="130"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    FontFamily="Futura"
                                     FontSize="28"
                                     Stroke="{x:Null}"
                                     Tag="Tag"
-                                    Text="{Binding Points[3]}" />
+                                    Text="{Binding Points[3]}"
+                                    TextAlignment="Center" />
 
                             </Canvas>
 

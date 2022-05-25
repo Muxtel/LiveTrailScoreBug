@@ -39,7 +39,14 @@ Public Class UserControl1
     Public Sub Refresh(ByVal sender As Object, ByVal e As EventArgs)
 
         Dim doc As New XmlDocument()
-        doc.Load("c:\Users\dugla\OneDrive\Bureau\Projets en cours\Euskal trail 2022\vMix\Data\courses.xml")
+        Dim VMixCfg = New VMixConfig
+        Dim CourseXmlPath As String = VMixCfg.Value1
+        Try
+            doc.Load(CourseXmlPath)
+            Console.Write(CourseXmlPath)
+        Catch
+            Return
+        End Try
         Dim course As XmlNode = doc.DocumentElement.SelectSingleNode("//course")
         Dim Timestamp As XmlNode = doc.DocumentElement.SelectSingleNode("//timestamp")
         Lignes = course.Item("lignes").ChildNodes
@@ -48,7 +55,12 @@ Public Class UserControl1
 
         If TimeStamps.Count() = 1 Then
 
-
+            Dim NCourse As New CourseInfo(
+                                            course.Attributes("Nom").Value.Substring(
+                                                course.Attributes("Nom").Value.IndexOf(": ") + 2
+                                                )
+                                          )
+            NomCourse.DataContext = NCourse
 
 
             MakeList()
@@ -57,6 +69,12 @@ Public Class UserControl1
 
             If TimeStamps(TimeStamps.Count() - 1) <> TimeStamps(TimeStamps.Count() - 2) Then
 
+                Dim NCourse As New CourseInfo(
+                                            course.Attributes("Nom").Value.Substring(
+                                                course.Attributes("Nom").Value.IndexOf(": ") + 2
+                                                )
+                                          )
+                NomCourse.DataContext = NCourse
                 MakeList()
                 ' redémarre l'anim
                 rippleStoryboard.Begin()
@@ -132,6 +150,21 @@ Public Class Headings
         Next
     End Sub
 
+End Class
+Public Class VMixConfig
+    Public Value1 As String
+    Sub New()
+        Dim VMixXml As New XmlDocument()
+        VMixXml.Load("http://localhost:8088/api")
+        Value1 = VMixXml.DocumentElement.SelectSingleNode("//dynamic/value1").InnerText
+
+    End Sub
+End Class
+Public Class CourseInfo
+    Public Property NCourse
+    Sub New(NomCourse As String)
+        NCourse = NomCourse.ToUpper()
+    End Sub
 End Class
 
 

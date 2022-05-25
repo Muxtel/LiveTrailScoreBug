@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?><abs contexttype="opengear" id="_top" keepalive="false" scroll="true">
+   <meta>
+      <lookup name="functions">
+         <entry key="Sleep">function sleep (time) {   return new Promise((resolve) =&gt; setTimeout(resolve, time)); }</entry>
+      </lookup>
+      <params>
+         <param access="1" constrainttype="STRING_CHOICE" maxlength="0" name="Course" oid="Course" type="STRING" value="trav: 60km" widget="radio-toggle">
+            <constraint>xalpine: 110km</constraint>
+            <constraint>team: 110km Relay</constraint>
+            <constraint>trav: 60km</constraint>
+            <constraint>liddes: 30km</constraint>
+         </param>
+         <param access="1" constrainttype="STRING_CHOICE" maxlength="0" name="Cat" oid="Cat" type="STRING" value="scratch" widget="radio-toggle">
+            <constraint>scratch</constraint>
+            <constraint>scratchH</constraint>
+            <constraint>scratchF</constraint>
+            <constraint>-14H</constraint>
+            <constraint>15-17F</constraint>
+            <constraint>15-17H</constraint>
+            <constraint>SEF</constraint>
+            <constraint>SEH</constraint>
+            <constraint>V1F</constraint>
+            <constraint>V1H</constraint>
+            <constraint>V2F</constraint>
+            <constraint>V2H</constraint>
+            <constraint>V3F</constraint>
+            <constraint>V3H</constraint>
+         </param>
+         <param access="1" maxlength="0" name="URL" oid="URL" type="STRING" value="https://demo.livetrail.net/" widget="text"/>
+         <param access="1" constrainttype="STRING_CHOICE" maxlength="0" name="Point1" oid="Point1" precision="0" type="STRING_ARRAY" widget="radio-toggle">
+            <value>00: Fouly</value>
+            <constraint>00: Fouly</constraint>
+            <constraint>16: Col Fen</constraint>
+            <constraint>18: GStB</constraint>
+            <constraint>20: BSP</constraint>
+            <constraint>22: Mille</constraint>
+            <constraint>24: Lourt</constraint>
+            <constraint>26: Chaux</constraint>
+            <constraint>32: Verbier</constraint>
+         </param>
+         <param access="1" constrainttype="STRING_CHOICE" maxlength="0" name="Point2" oid="Point2" precision="0" type="STRING_ARRAY" widget="radio-toggle">
+            <value>16: Col Fen</value>
+            <constraint>00: Fouly</constraint>
+            <constraint>16: Col Fen</constraint>
+            <constraint>18: GStB</constraint>
+            <constraint>20: BSP</constraint>
+            <constraint>22: Mille</constraint>
+            <constraint>24: Lourt</constraint>
+            <constraint>26: Chaux</constraint>
+            <constraint>32: Verbier</constraint>
+         </param>
+         <param access="1" constrainttype="STRING_CHOICE" maxlength="0" name="Point3" oid="Point3" precision="0" type="STRING_ARRAY" widget="radio-toggle">
+            <value>18: GStB</value>
+            <constraint>00: Fouly</constraint>
+            <constraint>16: Col Fen</constraint>
+            <constraint>18: GStB</constraint>
+            <constraint>20: BSP</constraint>
+            <constraint>22: Mille</constraint>
+            <constraint>24: Lourt</constraint>
+            <constraint>26: Chaux</constraint>
+            <constraint>32: Verbier</constraint>
+         </param>
+         <param access="1" constrainttype="STRING_CHOICE" maxlength="0" name="Point4" oid="Point4" precision="0" type="STRING_ARRAY" widget="radio-toggle">
+            <value>20: BSP</value>
+            <constraint>00: Fouly</constraint>
+            <constraint>16: Col Fen</constraint>
+            <constraint>18: GStB</constraint>
+            <constraint>20: BSP</constraint>
+            <constraint>22: Mille</constraint>
+            <constraint>24: Lourt</constraint>
+            <constraint>26: Chaux</constraint>
+            <constraint>32: Verbier</constraint>
+         </param>
+         <param access="1" constrainttype="STRING_CHOICE" maxlength="0" name="Check" oid="Check" precision="0" type="STRING_ARRAY" widget="checkbox">
+            <value>Test2</value>
+            <value>Test2</value>
+            <constraint>Test</constraint>
+            <constraint>Test2</constraint>
+         </param>
+         <param access="1" constrainttype="INT_NULL" name="from" oid="from" precision="0" type="INT16" value="0" widget="default"/>
+         <param access="1" constrainttype="INT_NULL" name="to" oid="to" precision="0" type="INT16" value="15" widget="default"/>
+         <param access="1" constrainttype="STRING_CHOICE" maxlength="0" name="Dossard" oid="Dossard" type="STRING" value="5000" widget="text">
+            <constraint>1</constraint>
+         </param>
+         <param access="1" maxlength="0" name="xmlFilePath" oid="xmlFilePath" type="STRING" value="file:/C:/Users/dugla/OneDrive/Bureau/Projets%20en%20cours/Euskal%20trail%202022/vMix/Data/courses3.xml" widget="file-picker"/>
+         <param access="1" maxlength="0" name="IPVMIX" oid="IPVMIX" type="STRING" value="localhost:8088" widget="default"/>
+      </params>
+   </meta>
+   <tab bottom="17" left="10" right="-41" scroll="true" tabposition="north" top="10">
+      <abs name="Configuration" style="style:toggleButton;">
+         <table left="26" right="300" top="21">
+            <tr>
+               <label anchor="east" colspan="1" fill="horizontal" name="Fichier destination XML : " rowspan="1" style="txt-align:east;" width="140"/>
+               <param colspan="1" expand="true" fill="both" oid="xmlFilePath"/>
+               <dropspot colspan="1" fill="both"/>
+               <dropspot colspan="1" fill="both"/>
+            </tr>
+            <tr>
+               <label anchor="east" colspan="1" fill="horizontal" name="IP vMix : " rowspan="1" style="txt-align:east;" width="140"/>
+               <param colspan="1" expand="true" fill="horizontal" height="34" insets="0,0,0,10" left="227" oid="IPVMIX" rowspan="1" style="bg#FFFFFF;fg#000000;size:Big;" top="19"/>
+               <dropspot colspan="1" fill="both"/>
+               <dropspot colspan="1" fill="both"/>
+            </tr>
+            <tr>
+               <label anchor="east" colspan="1" fill="horizontal" name="URL Serveur : " rowspan="1" style="txt-align:east;" width="140"/>
+               <param colspan="2" expand="true" fill="horizontal" insets="0,0,0,10" left="227" oid="URL" rowspan="1" style="bg#FFFFFF;fg#000000;size:Big;" top="19"/>
+               <button anchor="west" buttontype="push" colspan="1" fill="horizontal" height="48" insets="" left="942" name="Charger courses" rowsopan="1" style="bg#4A9776;look:normal;bdr#000000;bdr:round;grid#000000;size:Big;" top="14">
+                  <task tasktype="ogscript">var url = params.getValue("URL",0) ;
+
+var xml = ogscript.parseXML(url+"/passages.php");
+var Courses = ogscript.runXPath("//courses/c", xml);
+
+//ogscript.debug(Courses.getLength());
+//ogscript.debug(Courses.item(1).getAttribute("n"));
+
+var choices = new Array()
+
+for( var j = 0; j&lt; Courses.getLength(); j++ ){
+   
+   choices[j] = Courses.item(j).getAttribute("id")+ ": " +Courses.item(j).getAttribute("n");
+   //ogscript.debug(choices[j]);
+  
+}
+
+
+var choiceConstraint = params.createStringChoiceConstraint(choices);
+params.replaceConstraint('Course', choiceConstraint);
+//ogscript.debug("ok");</task>
+               </button>
+            </tr>
+         </table>
+      </abs>
+      <abs name="Passages" style="style:toggleButton;">
+         <table left="26" top="21" width="1557">
+            <tr>
+               <label colspan="1" height="46" name="Courses : " rowspan="1" style="txt-align:east;" width="122"/>
+               <simplegrid anchor="west" colspan="2" fill="horizontal" height="44" left="227" rows="1" rowspan="1" top="72" width="1400">
+                  <param expand="true" height="74" id="" left="616" name="" oid="Course" runtasksonload="true" style="style:toggleButton;" top="75" width="320">
+                     <task tasktype="ogscript">ogscript.debug(params.getValue("Course",0));
+var courseVal = params.getValue("Course",0)
+var courseId = courseVal.substr(0,courseVal.indexOf(":"));
+var url = params.getValue("URL",0) ;
+var xml = ogscript.parseXML(url+"/passages.php?course=" + courseId);
+var Cats = ogscript.runXPath("//cat/c", xml);
+
+ogscript.debug("length: "+Cats.getLength());
+//ogscript.debug(Courses.item(1).getAttribute("n"));
+
+var choices = new Array()
+
+for( var j = 0; j&lt; Cats.getLength(); j++ ){
+   
+   choices[j] = Cats.item(j).getAttribute("id");
+   ogscript.debug(choices[j]);
+  
+}
+
+
+var choiceConstraint = params.createStringChoiceConstraint(choices);
+params.replaceConstraint('Cat', choiceConstraint);
+//ogscript.debug("ok");</task>
+                  </param>
+               </simplegrid>
+            </tr>
+            <tr>
+               <label colspan="1" height="40" name="Catégories : " rowspan="1" style="txt-align:east;" width="121"/>
+               <simplegrid colspan="2" height="40" left="227" rows="1" rowspan="1" top="123" width="1400">
+                  <param expand="true" height="74" id="" left="616" name="" oid="Cat" runtasksonload="true" style="style:toggleButton;" top="175" width="320">
+                     <task tasktype="ogscript">ogscript.debug(params.getValue("Cat",0));
+var courseVal = params.getValue("Course",0)
+var courseId = courseVal.substr(0,courseVal.indexOf(":"));
+var catId = params.getValue("Cat",0);
+var url = params.getValue("URL",0) ;
+var xml = ogscript.parseXML(url+"/passages.php?course="+ courseId + "&amp;cat=" + catId);
+var Points = ogscript.runXPath("//colonnes/c", xml);
+
+ogscript.debug("length: "+ Points.getLength());
+
+var choices = new Array()
+
+for( var j = 0; j&lt; Points.getLength(); j++ ){
+   
+   choices[j] = Points.item(j).getAttribute("idpt") + ": " + Points.item(j).getAttribute("nom");
+   ogscript.debug(choices[j]);
+  
+}
+
+
+var choiceConstraint = params.createStringChoiceConstraint(choices);
+params.replaceConstraint('Point1', choiceConstraint);
+params.replaceConstraint('Point2', choiceConstraint);
+params.replaceConstraint('Point3', choiceConstraint);
+params.replaceConstraint('Point4', choiceConstraint);
+//ogscript.debug("ok");</task>
+                  </param>
+               </simplegrid>
+            </tr>
+            <tr>
+               <label colspan="1" name="Point colonne 1 : " rowspan="1" style="txt-align:east;" width="140"/>
+               <simplegrid anchor="west" colspan="2" height="40" left="228" rows="1" rowspan="1" top="174" width="1400">
+                  <param expand="true" height="74" id="" left="616" name="" oid="Point1" runtasksonload="true" top="275" width="320">
+                     <task tasktype="ogscript">ogscript.debug(params.getValue("Point1",0));</task>
+                  </param>
+               </simplegrid>
+            </tr>
+            <tr>
+               <label colspan="1" height="40" name="Point colonne 2 : " rowspan="1" style="txt-align:east;" width="140"/>
+               <simplegrid anchor="west" colspan="2" height="40" left="228" rows="1" rowspan="1" top="174" width="1400">
+                  <param expand="true" height="74" id="" left="616" name="" oid="Point2" runtasksonload="true" top="275" width="320">
+                     <task tasktype="ogscript">ogscript.debug(params.getValue("Point2",0));</task>
+                  </param>
+               </simplegrid>
+            </tr>
+            <tr>
+               <label colspan="1" height="40" name="Point colonne 3 : " rowspan="1" style="txt-align:east;" width="140"/>
+               <simplegrid anchor="west" colspan="2" height="40" left="228" rows="1" rowspan="1" top="174" width="1400">
+                  <param expand="true" height="74" id="" left="616" name="" oid="Point3" runtasksonload="true" top="275" width="320">
+                     <task tasktype="ogscript">ogscript.debug(params.getValue("Point3",0));</task>
+                  </param>
+               </simplegrid>
+            </tr>
+            <tr>
+               <label colspan="1" height="40" name="Point colonne 4 : " rowspan="1" style="txt-align:east;" width="140"/>
+               <simplegrid anchor="west" colspan="2" height="40" left="228" rows="1" rowspan="1" top="174" width="1400">
+                  <param expand="true" height="74" id="" left="616" name="" oid="Point4" runtasksonload="true" top="275" width="320">
+                     <task tasktype="ogscript">ogscript.debug(params.getValue("Point4",0));</task>
+                  </param>
+               </simplegrid>
+            </tr>
+            <tr>
+               <label colspan="1" height="40" name="De : " rowspan="1" style="txt-align:east;" width="140"/>
+               <param anchor="west" colspan="1" expand="true" fill="none" height="34" insets="5,5,5,5" oid="from" rowspan="1" style="bg#FFFFFF;fg#000000;size:Big;txt-align:west;" width="600"/>
+               <dropspot colspan="1" fill="both"/>
+            </tr>
+            <tr>
+               <label colspan="1" height="40" name="A : " rowspan="1" style="txt-align:east;" width="140"/>
+               <param anchor="west" colspan="1" expand="true" fill="none" height="34" insets="5,5,5,5" oid="to" rowspan="1" style="bg#FFFFFF;fg#000000;size:Big;txt-align:west;" width="600"/>
+               <dropspot colspan="1" fill="both"/>
+            </tr>
+            <tr>
+               <dropspot colspan="1" fill="both" rowspan="1" weightx="1.0" weighty="1.0"/>
+               <simplegrid colspan="1" fill="both" height="300" rowspan="1" scroll="true" width="600">
+                  <label id="dataPreview" insets="" name="dataPreview" style="txt-align:center;bdr#FFFFFF;bdr:round;size:Normal;fg#140F0F;bg-insets:5,5,5,5;bg-align:center;bg-fill:shrink;bg#FFFFFF;look:round;grid#FFFFFF;"/>
+               </simplegrid>
+               <ndi anchor="center" colspan="1" fill="vertical" height="311" quality="low" showname="true" srcname="IBAN (vMix - Output 1)" tallystate="Both" width="602"/>
+            </tr>
+            <tr>
+               <dropspot colspan="1" fill="both" height="60"/>
+               <button buttontype="push" colspan="1" height="60" left="620" name="CHARGER ET PREVISUALISER DATA" style="bg#green;fg#000000;" top="535">
+                  <task tasktype="ogscript">var urlroot = params.getValue("URL",0);
+var courseVal = params.getValue("Course",0);
+var courseId = courseVal.substr(0,courseVal.indexOf(":"));
+var catId = params.getValue("Cat", 0);
+var from = params.getValue("from",0);
+var to = params.getValue("to",0);
+var url = urlroot + "/passages.php?course=" + courseId + "&amp;cat=" + catId + "&amp;from=" + from + "&amp;to=" + to; 
+var doc = ogscript.parseXML(url);
+
+var headList= ogscript.runXPath('//colonnes/c', doc);
+var lineList= ogscript.runXPath('//lignes/l', doc);
+
+var tableStart = '&lt;html&gt;&lt;div height="100" scrolly="true"&gt;&lt;table border="1" height="100" scrolly="true"&gt;';
+var tableEnd = '&lt;/table&gt;&lt;/div&gt;&lt;/html&gt;';
+var trStart='&lt;tr&gt;';
+var trEnd='&lt;/tr&gt;';
+var headItems="&lt;td&gt;&lt;/td&gt;";
+var lines="";
+
+
+// quelles colonnes sont selectionnées
+var col1Id = params.getValue("Point1",0).substr(0,params.getValue("Point1",0).indexOf(":"));
+var col2Id = params.getValue("Point2",0).substr(0,params.getValue("Point2",0).indexOf(":"));
+var col3Id = params.getValue("Point3",0).substr(0,params.getValue("Point3",0).indexOf(":"));
+var col4Id = params.getValue("Point4",0).substr(0,params.getValue("Point4",0).indexOf(":"));
+
+ogscript.debug(col1Id);
+
+// colonnes
+for (var i = 0; i &lt; headList.getLength(); i++){
+   //seulement les points selectionnés
+   if ( headList.item(i).getAttribute("idpt") == col1Id 
+         || headList.item(i).getAttribute("idpt") == col2Id
+         || headList.item(i).getAttribute("idpt") == col3Id
+         || headList.item(i).getAttribute("idpt") == col4Id
+       ){
+      headItems = headItems + '&lt;td&gt;' + headList.item(i).getAttribute("nom") + '&lt;/td&gt;';
+      
+   }
+}
+
+// lignes
+for (var i = 0; i &lt; lineList.getLength(); i++){
+   lines = lines + '&lt;tr&gt;&lt;td&gt;' + lineList.item(i).getAttribute("nom") + '&lt;/td&gt;';
+   for (var j = 0 ; j &lt; lineList.item(i).getLength(); j++ ){
+      //seulement les points selectionnés
+      if ( lineList.item(i).item(j).getAttribute("idpt") == col1Id
+            || lineList.item(i).item(j).getAttribute("idpt") == col2Id
+            || lineList.item(i).item(j).getAttribute("idpt") == col3Id
+            || lineList.item(i).item(j).getAttribute("idpt") == col4Id
+      ){
+         lines = lines + '&lt;td&gt;' + lineList.item(i).item(j).getAttribute('h') +'&lt;/td&gt;';
+      }
+   }
+   lines = lines + '&lt;/tr&gt;';
+}
+
+
+var table = tableStart + trStart + headItems + trEnd + lines + tableEnd;
+ogscript.rename('dataPreview', table);</task>
+                  <task tasktype="ogscript">var urlroot = params.getValue("URL",0);
+var courseVal = params.getValue("Course",0);
+var courseId = courseVal.substr(0,courseVal.indexOf(":"));
+var catId = params.getValue("Cat", 0);
+var from = params.getValue("from",0);
+var to = params.getValue("to",0);
+var url = urlroot + "/passages.php?course=" + courseId + "&amp;cat=" + catId + "&amp;from=" + from + "&amp;to=" + to; 
+
+var doc = ogscript.parseXML(url);
+var headList= ogscript.runXPath('//colonnes/c', doc);
+var lineList= ogscript.runXPath('//lignes/l', doc);
+
+// &lt;timestamp&gt; sert à stocker le timestamp du moment de la création du fichier afin de ne pas créer indéfiniment des lignes dans le controleur wpf
+
+var xmlDoc = ogscript.parseXML('&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;course&gt;&lt;timestamp&gt;'+ Date.now() +'&lt;/timestamp&gt;&lt;lignes/&gt;&lt;/course&gt;');
+var course = xmlDoc.getDocumentElement();
+
+
+course.setAttribute("Nom",courseVal);
+
+// quelles colonnes sont selectionnées
+var col1Id = params.getValue("Point1",0).substr(0,params.getValue("Point1",0).indexOf(":"));
+var col2Id = params.getValue("Point2",0).substr(0,params.getValue("Point2",0).indexOf(":"));
+var col3Id = params.getValue("Point3",0).substr(0,params.getValue("Point3",0).indexOf(":"));
+var col4Id = params.getValue("Point4",0).substr(0,params.getValue("Point4",0).indexOf(":"));
+
+ogscript.debug(col1Id);
+
+//*********************************//
+// colonnes (premiere ligne, en fait)
+//*******************************//
+var lignes = course.getElementsByTagName("lignes").item(0) ;
+var l = xmlDoc.createElement('l');
+var nom = xmlDoc.createElement('Nom');
+l.appendChild(nom);
+lignes.appendChild(l);
+var point;
+for (var i = 0; i &lt; headList.getLength(); i++){
+   //seulement les points selectionnés
+   if ( headList.item(i).getAttribute("idpt") == col1Id 
+         || headList.item(i).getAttribute("idpt") == col2Id
+         || headList.item(i).getAttribute("idpt") == col3Id
+         || headList.item(i).getAttribute("idpt") == col4Id
+       ){
+      point = xmlDoc.createElement('Point'); 
+      point.setTextContent(headList.item(i).getAttribute("nom"));  
+      l.appendChild(point);   
+      
+   }
+}
+
+//*********************************//
+// lignes coureurs
+//*******************************//
+// lignes
+for (var i = 0; i &lt; lineList.getLength(); i++){
+   l = xmlDoc.createElement('l');
+   lignes.appendChild(l);
+   nom = xmlDoc.createElement('Nom');
+   nom.setTextContent(
+      lineList.item(i).getAttribute("prenom")
+      + " " +
+      lineList.item(i).getAttribute("nom")
+      );
+   l.appendChild(nom);
+   
+   dossard = xmlDoc.createElement('Dossard');
+   dossard.setTextContent(lineList.item(i).getAttribute("doss"));
+   l.appendChild(dossard);
+
+   classement = xmlDoc.createElement('Classement');
+   classement.setTextContent(from + i +1);
+   l.appendChild(classement);
+   
+   for (var j = 0 ; j &lt; lineList.item(i).getLength(); j++ ){
+      //seulement les points selectionnés
+      if ( lineList.item(i).item(j).getAttribute("idpt") == col1Id
+            || lineList.item(i).item(j).getAttribute("idpt") == col2Id
+            || lineList.item(i).item(j).getAttribute("idpt") == col3Id
+            || lineList.item(i).item(j).getAttribute("idpt") == col4Id
+      ){
+        point = xmlDoc.createElement('Point');
+        point.setTextContent(lineList.item(i).item(j).getAttribute('h').substring(0,5));
+        l.appendChild(point);
+      }
+   }
+   
+}
+
+ogscript.debug(ogscript.serializeXML(course));
+
+ogscript.saveToFile(params.getValue("xmlFilePath",0), course, true);
+function sleep(milliseconds) {
+  const date = Date.now();
+  var currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date &lt; milliseconds);
+}</task>
+                  <task tasktype="ogscript">var xmlFilePath = params.getValue("xmlFilePath",0);
+ogscript.asyncPost("http://localhost:8088/API/?Function=SetDynamicValue1&amp;Value=" + xmlFilePath, null, null);</task>
+               </button>
+               <simplegrid colspan="1" fill="both" height="60" rowspan="1" scroll="true">
+                  <button anchor="center" buttontype="push" height="60" name="AFFICHER / CACHER" style="bg#red;bg-align:center;">
+                     <task tasktype="ogscript">ogscript.asyncPost("http://localhost:8088/API/?Function=OverlayInput1&amp;Input=LiveTrailScoreBug.dll", null, null);</task>
+                  </button>
+                  <button anchor="center" buttontype="push" height="60" name="PLEIN ECRAN : AFFICHER / CACHER" style="bg#red;bg-align:center;">
+                     <task tasktype="ogscript">ogscript.asyncPost("http://localhost:8088/API/?Function=OverlayInput1&amp;Input=LiveTrailScorePleinEcran.dll", null, null);</task>
+                  </button>
+               </simplegrid>
+            </tr>
+         </table>
+      </abs>
+      <abs name="Carte coureur" style="style:toggleButton;">
+         <table height="365" left="97" top="35" width="1042">
+            <tr>
+               <label colspan="1" fill="both" name="Recherche par dossard" rowspan="1" style="txt-align:west" weightx="1.0" weighty="1.0"/>
+               <param colspan="1" expand="true" fill="both" oid="Dossard" rowspan="1" style="bg#FFFFFF;look:round;fg#darkdivider;" weightx="1.0" weighty="1.0"/>
+            </tr>
+            <tr>
+               <button buttontype="push" colspan="1" fill="both" name="PREVIEW" rowspan="1" style="bg#green;" weightx="1.0" weighty="1.0">
+                  <task tasktype="ogscript">var url = params.getValue("URL",0);
+ogscript.asyncPost("http://"+params.getValue("IPVMIX",0)+
+                     "/API/?Function=BrowserNavigate&amp;Input=Carte%20Courreur&amp;Value=" + 
+                     url + "/coureur.php?rech=" + params.getValue("Dossard",0)
+                     , null, null);
+ogscript.asyncPost("http://"+params.getValue("IPVMIX",0)+
+                     "/API/?Function=PreviewInput&amp;Input=Carte Courreur", null, null);</task>
+               </button>
+               <button buttontype="push" colspan="1" fill="both" name="TAKE" style="bg#red;" weightx="1.0" weighty="1.0">
+                  <task tasktype="ogscript">ogscript.asyncPost("http://"+params.getValue("IPVMIX",0)+
+                     "/API/?Function=Cut&amp;Input=Carte Courreur", null, null);</task>
+               </button>
+            </tr>
+            <tr>
+               <ndi colspan="1" fill="fit" height="300" quality="low" rowspan="1" showname="true" srcname="IBAN (vMix - Output 4)" tallystate="Both" width="554"/>
+               <ndi colspan="1" fill="fit" height="300" quality="low" rowspan="1" showname="true" srcname="IBAN (vMix - Output 1)" tallystate="Both" width="554"/>
+            </tr>
+         </table>
+      </abs>
+   </tab>
+</abs>

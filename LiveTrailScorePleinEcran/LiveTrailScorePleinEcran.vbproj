@@ -52,8 +52,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="vMixTitleLibrary">
-      <HintPath>..\..\..\..\..\..\Program Files\vMix\vMixTitleLibrary.dll</HintPath>
+    <Reference Include="vMixTitleLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\vMix\vMixTitleLibrary.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />

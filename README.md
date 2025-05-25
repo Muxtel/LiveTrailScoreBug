@@ -5,3 +5,6 @@ Ce projet Dashboard parse le code d'un site web dédié au Trail, permet de sele
 
 LiveTrailScoreBug est un habillage (titrage) pour vMix de type XAML. 
 Il lit le fichier XML créé par Dashboard et restitue les données dans une template graphique. 
+
+# Obsolete
+vMix aillant abandonné peu à peu la fonctionnalité *XAML titles*, ce projet n'est plus très pertinent.
